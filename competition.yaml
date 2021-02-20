@@ -1,0 +1,51 @@
+title: Automated Deep Learning Self-Service
+description: Here you can submit datasets to Deep Wisdom (winner of AutoDL challenge)
+start_date: 2020-12-01 20:00:00+00:00
+end_date: null
+competition_docker_image: micavcr/deepwisdom:gpu-latest
+image: logo.png
+has_registration: false
+force_submission_to_leaderboard: false
+disallow_leaderboard_modifying: true
+enable_detailed_results: true
+admin_names: pavao
+html:
+  About the Score: About the Score.html
+  Credits: Credits.html
+  How to format my submission ?: How to format my submission ?.html
+  Making predictions: Making predictions.html
+  Starting Kit new: Starting Kit.html
+  Terms and Conditions: Terms and Conditions.html
+  overview: Overview.html
+phases:
+  0:
+    auto_migration: false
+    color: green
+    description: Submit datasets to Deep Wisdom
+    ingestion_program: ingestion_program.zip
+    input_data: input_data_1.zip
+    is_scoring_only: false
+    label: DeepWisdom
+    max_submissions: 100
+    max_submissions_per_day: 10
+    phasenumber: 1
+    public_data: public_data_1.zip
+    reference_data: reference_data.zip
+    scoring_program: scoring_program.zip
+    start_date: 2020-12-01 20:00:00+00:00
+leaderboard:
+  columns:
+    Duration:
+      label: Duration
+      leaderboard: &id001
+        label: Results
+        rank: 1
+      rank: 7
+      sort: desc
+    score:
+      label: Prediction score
+      leaderboard: *id001
+      rank: 2
+      sort: desc
+  leaderboards:
+    Results: *id001
